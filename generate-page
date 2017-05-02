@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+jupyter nbconvert --to html --output index.html workbook.ipynb
+
