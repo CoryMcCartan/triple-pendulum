@@ -1,0 +1,11 @@
+*.swp
+*.bak
+*.log
+*.aux
+*.snm
+*.toc
+*.out
+*.nav
+.DS_Store
+
+presentation.*
