@@ -1,17 +1,16 @@
 \ProvidesPackage{cmcphys}
 % Imports
-\RequirePackage{amsthm}
-\RequirePackage{amssymb}
-\RequirePackage{amsfonts}
-\RequirePackage{amsmath}
-\RequirePackage{mathtools}
-\RequirePackage{siunitx}
-\RequirePackage{enumerate}
-
-\RequirePackage{tikz}
-\RequirePackage{tikzscale}
-\RequirePackage{wrapfig}
-\RequirePackage[parfill]{parskip}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{wrapfig}
+\usepackage[parfill]{parskip}
 
 % Custom commands
 % differential
@@ -20,12 +19,6 @@
 \makeatother
 \newcommand{\D}[2]{\ensuremath{\frac{\d #1}{\d #2}}}
 \newcommand{\pD}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
-% figure
-\newcommand{\figspace}[2][2in]{
-    \begin{wrapfigure}{r}{#1}
-        \vspace{#2}
-    \end{wrapfigure}
-}
 
 % Changing settings
 \mathtoolsset{showonlyrefs}
