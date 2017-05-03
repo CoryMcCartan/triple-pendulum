@@ -6,6 +6,9 @@
 \allowdisplaybreaks
 
 \renewcommand{\L}{\mathcal{L}}
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\i}{\mathrm{i}}
+\renewcommand{\Re}{\mathrm{Re}\ }
 
 \title{Chaotic Behavior of the Triple Pendulum \\
     \large A Computational Approach }
@@ -22,6 +25,7 @@
     \begin{appendices}
 
     \section{Equations of Motion}
+    \subsection{Full Solution}
 
     \begin{wrapfigure}[13]{r}{0.25\textwidth}
         \centering
@@ -318,9 +322,9 @@
             \ddot\phi_3
         \end{pmatrix} =
         \begin{pmatrix}
-            \frac{1}{3} {\left(2 \dot\phi_2^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_1-\phi_3)-\frac{3 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{2 {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6} + \frac{2 \cos(\phi_1-\phi_2)^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 1\right)}- {\left(2 \dot\phi_1^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_2-\phi_3)-\frac{2 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}} + \frac{\cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}\right)} + \frac{2 {\left(\dot\phi_1^2 \sin(\phi_1-\phi_3)-\dot\phi_2^2 \sin(\phi_2-\phi_3)-\frac{g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6} \\
-            -{\left(2 \dot\phi_2^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_1-\phi_3)-\frac{3 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}} + \frac{\cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}\right)} + \frac{3}{2} {\left(2 \dot\phi_1^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_2-\phi_3)-\frac{2 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{1}{2 \cos(\phi_1-\phi_2)^2- 3} + \frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)}^2 {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}}\right)}-\frac{3 {\left(\dot\phi_1^2 \sin(\phi_1-\phi_3)-\dot\phi_2^2 \sin(\phi_2-\phi_3)-\frac{g \sin\left(\phi_1\right)}{l}\right)} {\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}} \\
-            \frac{2 {\left(2 \dot\phi_2^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_1-\phi_3)-\frac{3 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6} + \frac{6 {\left(\dot\phi_1^2 \sin(\phi_1-\phi_3)-\dot\phi_2^2 \sin(\phi_2-\phi_3)-\frac{g \sin\left(\phi_1\right)}{l}\right)}}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6}-\frac{3 {\left(2 \dot\phi_1^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_2-\phi_3)-\frac{2 g \sin\left(\phi_1\right)}{l}\right)} {\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}}
+            \frac{1}{3} {\left(2 \dot\phi_2^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_1-\phi_3)-\frac{3 g \sin\left( \phi_1\right)}{l}\right)} {\left(\frac{2 {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6} + \frac{2 \cos(\phi_1-\phi_2)^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 1\right)}- {\left(2 \dot\phi_1^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_2-\phi_3)-\frac{2 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}} + \frac{\cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}\right)} + \frac{2 {\left(\dot\phi_1^2 \sin(\phi_1-\phi_3)-\dot\phi_2^2 \sin(\phi_2-\phi_3)-\frac{g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6} \\
+            -{\left(2 \dot\phi_2^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_1-\phi_3)-\frac{3 g\sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}} + \frac{\cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}\right)} + \frac{3}{2} {\left(2 \dot\phi_1^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_2-\phi_3)-\frac{2 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{1}{2 \cos(\phi_1-\phi_2)^2- 3} + \frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)}^2 {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}}\right)}-\frac{3 {\left(\dot\phi_1^2 \sin(\phi_1-\phi_3)-\dot\phi_2^2 \sin(\phi_2-\phi_3)-\frac{g \sin\left(\phi_1\right)}{l}\right)} {\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}} \\
+           \frac{2 {\left(2 \dot\phi_2^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_1-\phi_3)-\frac{3 g \sin\left(\phi_1\right)}{l}\right)} {\left(\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)} \cos(\phi_1-\phi_2)}{2 \cos(\phi_1-\phi_2)^2- 3}-\cos(\phi_1-\phi_3)\right)}}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6} + \frac{6 {\left(\dot\phi_1^2 \sin(\phi_1-\phi_3)-\dot\phi_2^2 \sin(\phi_2-\phi_3)-\frac{g \sin\left(\phi_1\right)}{l}\right)}}{2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6}-\frac{3 {\left(2 \dot\phi_1^2 \sin(\phi_1-\phi_2)-\dot\phi_3^2 \sin(\phi_2-\phi_3)-\frac{2 g \sin\left(\phi_1\right)}{l}\right)} {\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}}{{\left(2 \cos(\phi_1-\phi_2)^2- 3\right)} {\left(2 \cos(\phi_1-\phi_3)^2-\frac{{\left(2 \cos(\phi_1-\phi_2) \cos(\phi_1-\phi_3)- 3 \cos(\phi_2-\phi_3)\right)}^2}{2 \cos(\phi_1-\phi_2)^2- 3}- 6\right)}}
         \end{pmatrix}
         $}\, ,\vspace{0.5em}
     \end{equation} 
@@ -331,6 +335,89 @@
     terms are repeated (especially the trigonometric functions of angle
     differences), this has the added advantage of allowing us to precompute
     these functions.
+
+    \subsection{Small-angle Approximation}
+
+    To check the validity of our numerical solution, we would like an analytical
+    solution. Clearly a full analytical solution is impossible. However, by
+    assuming that $\phi_1,\phi_2$, and $\phi_3$ remain small, we can radically
+    simplify the equations of motion to reach a closed-form expression for
+    $\phi_1,\phi_2$, and $phi_3$ as a function of time.  
+
+    We begin by substituting $\cos\phi_i=1-\frac{1}{2}\phi_i^2$, the second
+    order Maclaurin approximation for cosine, into our expression for potential
+    energy. We also substitute $\dot\phi_i\dot\phi_j\cos(\phi_i-\phi_j)=\dot
+    \phi_i\dot\phi_j$, since for the small product $\dot\phi_i\dot\phi_j$, the
+    cosine term is negligible. This allows us to simplify our expression for
+    kinetic energy as well. We find
+    \begin{align}
+        U &= -mgl\left(3(1-\tfrac{1}{2}\phi_1^2)+2(1-\tfrac{1}{2}\phi_2^2
+            +(1-\tfrac{1}{2}\phi_3^2))\right) \\
+        &\simeq mgl\left(\frac{3}{2}\phi_1^2+\frac{2}{2}\phi_2^2
+            +\frac{1}{2}\phi_3^2\right) \tag*{(since the constant terms will be
+            dropped when the derivative is taken)} \\\\
+        T &= \frac{1}{2}ml^2(3\dot\phi_1^2+2\dot\phi_2^2+\dot\phi_1^2
+            +4\dot\phi_1\phi_2+2\dot\phi_1\phi_3+2\dot\phi_2\phi_3),
+    \end{align}
+    so the Lagrangian is
+    \begin{align}
+        \L &= T+U \\
+        &= \frac{1}{2}ml^2(3\dot\phi_1^2+2\dot\phi_2^2+\dot\phi_1^2
+            +4\dot\phi_1\phi_2+2\dot\phi_1\phi_3+2\dot\phi_2\phi_3)
+            -mgl\left(\frac{3}{2}\phi_1^2+\frac{2}{2}\phi_2^2
+            +\frac{1}{2}\phi_3^2\right)
+    \end{align}
+    Taking derivatives as required, we have
+    \begin{align}
+        \pD{\L}{\phi_1} &= -3mgl\phi_1, & 
+        \pD{\L}{\dot\phi_1} &= ml^2(3\dot\phi_1+4\dot\phi_2+2\dot\phi_3)
+        &\Rightarrow\quad
+        \D{}{t}\pD{\L}{\dot\phi_1} &= ml^2(3\ddot\phi_1+4\ddot\phi_2+2\ddot\phi_3) \\
+                %
+        \pD{\L}{\phi_2} &= -2mgl\phi_2, & 
+        \pD{\L}{\dot\phi_2} &= ml^2(4\dot\phi_1+2\dot\phi_2+2\dot\phi_3)
+        &\Rightarrow\quad
+        \D{}{t}\pD{\L}{\dot\phi_3} &= ml^2(4\ddot\phi_1+2\ddot\phi_2+2\ddot\phi_3) \\
+                %
+        \pD{\L}{\phi_3} &= -mgl\phi_3, & 
+        \pD{\L}{\dot\phi_3} &= ml^2(2\dot\phi_1+2\dot\phi_2+\dot\phi_3)
+        &\Rightarrow\quad
+        \D{}{t}\pD{\L}{\dot\phi_3} &= ml^2(2\ddot\phi_1+2\ddot\phi_2+\ddot\phi_3) \\
+    \end{align}
+    Applying our equilibrium condition $\D{}{t}\pD{\L}{\dot\phi_i}=\pD{\L}
+    {\phi_i}$, we have our three equations of motion:
+    \begin{align}
+        ml^2(3\ddot\phi_1+4\ddot\phi_2+2\ddot\phi_3) &= -3mgl\phi_1 \\
+        ml^2(4\ddot\phi_1+2\ddot\phi_2+2\ddot\phi_3) &= -2mgl\phi_2 \\
+        ml^2(2\ddot\phi_1+2\ddot\phi_2+\ddot\phi_3) &= -mgl\phi_3
+    \end{align}
+    Cancelling the common term of $ml^2$, we have
+    \begin{align}
+        3\ddot\phi_1+4\ddot\phi_2+2\ddot\phi_3 &= -\frac{3g}{l}\phi_1 \\
+        4\ddot\phi_1+2\ddot\phi_2+2\ddot\phi_3 &= -\frac{2g}{l}\phi_2 \\
+        2\ddot\phi_1+2\ddot\phi_2+\ddot\phi_3  &= -\frac{g}{l}\phi_3
+    \end{align}
+    We can write this system of equations as a single matrix equation \[
+        M\vec{\ddot\phi} = -G\vec{\phi} 
+    \] where
+    \begin{align}
+        M &= \begin{pmatrix}3&4&2\\4&2&2\\2&2&1\end{pmatrix} &
+        G &= \frac{g}{l}\begin{pmatrix}3&0&0\\0&2&0\\0&0&1\end{pmatrix}
+    \end{align}
+    We assume a periodic solution of the form \[
+        \vec\phi = \Re \vec{z}, \quad\mathrm{where}\quad
+        \vec{z} = \vec{a}\,\e^{\i\omega t}
+    \] Taking the second derivative of $\vec{z}$, we find \[
+        \vec{\ddot z} = -\omega^2\vec{a}\,\e^{\i\omega t} = -omega^2\vec{z}
+    \] So our differential equation becomes \[
+        -\omega^2 M\vec{a}\e^{\i\omega t} = -G\vec{a}\e^{\i\omega t},
+    \] which by rearranging and cancelling the common exponential term yields \[
+        (G-\omega^2M)\vec{a} = 0
+    \] This equation will have nontrivial solutions when $\det(G-\omega^2M)=0$.
+    Calculating the determinant (again with a computer algebra system), we find
+    \begin{align}
+        w^{6}+\frac{9g}{l}w^4+\frac{9g^2}{l^2}w^2-\frac{3g^3}{l^3} &= 0
+    \end{align}
 
     \end{appendices}
 
