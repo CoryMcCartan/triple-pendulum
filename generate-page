@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-jupyter nbconvert --to html --output index.html workbook.ipynb
+jupyter nbconvert --to html --output index.html part_1.ipynb
+jupyter nbconvert --to html --output part2.html part_2.ipynb
+cat part2.html >> index.html
 
